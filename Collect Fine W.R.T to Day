@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+//structure declaration
+
+struct car
+{
+    int car_no;
+    float fine;
+    float even_fine,odd_fine;
+    float odd_sum=0,even_sum=0;
+}   s[0];
+
+
+// Main function starts 
+int main()
+{   int no;
+    cout<<"Enter The Number Of Cars You Want To Add In List "<<endl;
+    cin>>no;
+    //variable declaration
+    int car_no;
+    float even_fine,odd_fine;
+    float odd_sum=0,even_sum=0;
+    cout<<"--------------------------------\n";
+    cout << "Enter Information Of Car's: " ;     //Heading 
+    cout<<"\n--------------------------------";
+    // storing information
+    for(int i = 0; i < no; ++i)
+    {
+        cout << "\nEnter Car No"<< endl;   //asks car number
+        cin>>s[i].car_no;     
+        
+              if (s[i].car_no%2==0)            //check if car no is even or odd
+                  {
+                      cout << "Enter fine: "<<endl;      
+                      cin>>s[i].even_fine;          //stores even car number fine
+                  }   
+              else
+                  {
+                      cout << "Enter fine: "<<endl;               
+                      cin>>s[i].odd_fine;             //stores odd car number fine
+                  }
+    even_sum=even_sum+s[i].even_fine;   //sums even car number fine 
+    odd_sum=odd_sum+s[i].odd_fine;       //sums odd car number fine
+    }
+    
+//asks the day
+  int date;  
+     cout<<"-----------------------------";
+     cout<<"\nEnter The Day"<<endl;
+     cin>>date;
+     cout << "Displaying Information: " << endl;
+     
+     //nested if starts to check valid date or not
+     if (date<31)
+     {
+     //check if date is even or Odd
+     if (date%2==0) 
+     {  cout<<"The Input Day Is "<<date<<" Therefore Displaying Sum Of Fine By ODD Car Numbers"<<endl;
+        cout<<"The Odd Number Car Sum Is "<<odd_sum<<endl;
+     }
+     else
+     {  cout<<"The Input Day Is "<<date<<" Therefore Displaying Sum Of Fine By EVEN Car Numbers"<<endl;
+         cout<<"The Even Number Car Sum Is "<<even_sum<<endl;
+     }
+     }
+     else
+     {
+         cout<<"\nPlease Enter Valid Day";
+     }
+    return 0;
+}
