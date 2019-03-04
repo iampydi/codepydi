@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b;
+cout<<"Enter The X-Cordinate ";
+cin>>a;
+cout<<"Enter The Y-Coordinate ";
+cin>>b;
+
+if (a>0&&b>0)
+cout<<"This will point in FIRST Quadrant";
+
+else if (a<0&&b>0)
+cout<<"This will point in SECOND Quadrant";
+
+else if (a<0&&b<0)
+cout<<"This will point in THIRD Quadrant";
+
+else if (a>0&&b<0)
+cout<<"This will point in FOURTH Quadrant";
+
+else if (a==0&&b>0)
+cout<<"Point on the POSITIVE Y AXIS";
+
+else if (a==0&&b<0)
+cout<<"Point on the NEGATIVE Y AXIS";
+
+else if (a>0&&b==0)
+cout<<"Point on the POSITIVE X AXIS";
+
+else if (a<0&&b==0)
+cout<<"Point on the NEGATIVE X AXIS";
+
+else 
+cout<<"Point on the ORIGIN";
+
+
+return 0;
+}
