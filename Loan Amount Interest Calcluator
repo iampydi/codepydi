@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float P,R,N,Interest,Total;
+    cout<<"Enter The Principle Amount ";
+    cin>>P;
+    cout<<"Enter The Rate Of Interest ";
+    cin>>R;
+    cout<<"Enter The Term (Years) ";
+    cin>>N;
+    
+    Interest =  (P*N*R)/100;
+    Total = Interest + P;
+    
+    cout<<"\nAmount Borrowed "<<P<<endl;
+    cout<<"Interest To Be Paid "<<Interest<<endl;
+    cout<<"Total Amount To Be Paid Finally "<<Total<<endl;
+    cout<<"Thank You";
+}
