@@ -1,0 +1,20 @@
+"""@iampydi""" """Github Id"""
+
+List=list()
+while True:
+    
+    Value=input("Enter The Value ")
+    List.append(Value)
+    if Value=="#":
+        List.remove("#")
+        break
+print("Old List Is",List)
+
+New_List=list()
+First=List.pop(0)
+Last=List.pop(-1)
+New_List.append(First)
+New_List.append(Last)
+
+print("New List Is",New_List)
+
