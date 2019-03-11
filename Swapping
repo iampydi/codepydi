@@ -1,0 +1,21 @@
+//@iampydi Github Id
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ int a,b,c=0;
+ cout<<"Enter the A Value ";
+ cin>>a;
+ cout<<"Enter The B Value ";
+ cin>>b;
+ 
+ c=a;
+ a=b;
+ b=c;
+ 
+ cout<<"After Swappig The Value Of A = "<<a;
+ cout<<"\nAfter Swappig The Value Of B = "<<b;
+
+}
